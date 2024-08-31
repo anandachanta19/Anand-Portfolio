@@ -1,0 +1,30 @@
+body{
+    background-color: #1e1e1e;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    color: #49b516;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+    font-size: large;
+    width: 100%;
+}
+
+.logo{
+    height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.opt{
+    height: 50px;
+    width: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    /* border: 1px white solid; */
+}
