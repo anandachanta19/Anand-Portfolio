@@ -6,14 +6,166 @@
     <title>Anand Achanta</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-    <div class="nav-bar">
+    <header class="nav-bar">
         <div class="logo">Anand_Achanta</div>
-        <div class="opt">Home</div>
-        <div class="opt">Skills</div>
-        <div class="opt">Projects</div>
-        <div class="opt">Contact</div>
-    </div> 
+        <nav class="nav-links">
+            <a href="#home" class="opt">Home</a>
+            <a href="#skills" class="opt">Skills</a>
+            <a href="#projects" class="opt">Projects</a>
+            <a href="#contact" class="opt">Contact</a>
+        </nav>
+        <a href="#" class="menu-toggle">Menu</a>
+        <div class="dropdown-menu">
+            <a href="#home" class="opt">Home</a>
+            <a href="#skills" class="opt">Skills</a>
+            <a href="#projects" class="opt">Projects</a>
+            <a href="#contact" class="opt">Contact</a>
+        </div>
+    </header> 
+
+    <section id="home" class="section">
+        <div class="terminal">
+            <pre><code id="home-terminal">ubuntu@anand:~$ cd home<br>ubuntu@anand:~$ python3 home.py<br></code></pre>
+        </div>
+        <div class="section-content hidden">
+            <div class="home-content">
+                <div class="left">
+                    <pre class="ascii-art">
+|.-----.|
+||x . x||
+||_.-._||
+`--)-(--`
+__ [=== o]___
+|:::::::::::|\
+`-=========-`()
+                    </pre>
+                    <div class="text-image">
+                        <span class="terminal-text">WELCOME TO MY PORTFOLIO</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="personal-info">
+                        <h1>Anand Achanta</h1>
+                        <p>Passionate about Programming</p>
+                        <p>Currently pusuing B.Tech. in Computer Science Enginnering</p>
+                        <p>Indian Institute of Information Technology, Guwahati</p>
+                        <!-- Add other personal info here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="skills" class="section">
+        <div class="terminal">
+            <pre><code id="skills-terminal">ubuntu@anand:~$ cd skills<br>ubuntu@anand:~$ sudo apt update skills<br></code></pre>
+        </div>
+        <div class="section-content hidden">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <i class="fab fa-python skill-icon"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java skill-icon"></i>
+                    <p>Java</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js skill-icon"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-flask skill-icon"></i>
+                    <p>Flask</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java skill-icon"></i>
+                    <p>Spring</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <p>MySQL</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <p>PostgreSQL</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <p>SQLite</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <p>AWS</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git skill-icon"></i>
+                    <p>Git</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-github skill-icon"></i>
+                    <p>Github</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="section">
+        <div class="terminal">
+            <pre><code id="projects-terminal">ubuntu@anand:~$ cd projects<br>ubuntu@anand:~$ python3 projects.py<br></code></pre>
+        </div>
+        <div class="section-content hidden">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Vlog-Blog</h3>
+                <p><strong>Tools:</strong> Python, Flask, Bootstrap, PostgreSQL</p>
+                <p>Developed a real-time blog platform with secure authentication and efficient content management.</p>
+            </div>
+            <div class="project-item">
+                <h3>Hover On</h3>
+                <p><strong>Tools:</strong> Spring, HTML, CSS, JavaScript, MySQL</p>
+                <p>Created a music management system for playlist creation and track navigation.</p>
+            </div>
+            <div class="project-item">
+                <h3>Stock News Alert System</h3>
+                <p><strong>Tools:</strong> Python, APIs</p>
+                <p>Engineered an alert system for real-time stock price changes with news updates.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="section">
+        <div class="terminal">
+            <pre><code id="contact-terminal">ubuntu@anand:~$ cd contact<br>ubuntu@anand:~$ python3 contact.py<br></code></pre>
+        </div>
+        <div class="section-content hidden">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:anandachanta19@gmail.com">Feel free to drop a mail!</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/anandachanta19">Let's Connect</a></p>
+            <p>Github: <a href="https://github.com/anandachanta19">My projects are available here</a></p>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <p>&copy; 2024 Anand Achanta. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

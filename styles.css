@@ -1,30 +1,312 @@
-body{
-    background-color: #1e1e1e;
+/* General Reset */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    font-family: 'Fira Code', monospace;
+    background-color: #000000; /* Black background */
+    color: #dcdcdc;
 }
 
-.nav-bar{
+/* Header */
+header.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
     color: #49b516;
-    font-family: 'Fira Code', monospace;
-    font-weight: 600;
-    font-size: large;
+    font-weight: 700;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+header .logo {
+    height: 50px;
+    padding-left: 20px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+header .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+header .nav-links .opt {
+    color: #49b516;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+header .nav-links .opt::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #49b516;
+    transition: width 0.3s;
+}
+
+header .nav-links .opt:hover::after {
     width: 100%;
 }
 
-.logo{
-    height: 50px;
-    width: 50%;
+header .menu-toggle {
+    display: none;
+    color: #49b516;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+header .menu-toggle:hover {
+    background-color: #49b516;
+    color: #000000;
+}
+
+header .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #000000; /* Black background */
+    z-index: 1000;
+}
+
+header .dropdown-menu.active {
+    display: block;
+}
+
+header .dropdown-menu .opt {
+    display: block;
+    padding: 10px 15px;
+    color: #49b516;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .dropdown-menu .opt:hover {
+    background-color: #49b516;
+    color: #000000;
+}
+
+/* Main */
+main {
+    padding-top: 60px; /* Offset for fixed header */
+    padding-bottom: 40px; /* Offset for fixed footer */
+    height: calc(100vh - 120px); /* Adjust height to fit in viewport considering header and footer */
+    overflow-y: auto;
+}
+
+/* Section */
+section {
+    height: calc(100vh - 120px); /* Adjust height to fit in viewport considering header and footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #000000; /* Black background */
+}
+
+/* Terminal */
+.terminal {
+    background-color: #000000;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em; /* Adjust font size */
+}
+
+/* Section Content */
+.section-content {
+    color: #dcdcdc;
+    text-align: center;
+    max-width: 1400px;
+    font-size: 0.85em;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+    color: #dcdcdc;
+    z-index: 1000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .nav-links {
+        display: none;
+    }
+
+    header .menu-toggle {
+        display: block;
+        margin-right: 10px;
+    }
+
+    header .dropdown-menu.active {
+        display: block;
+    }
+
+    .terminal {
+        font-size: 0.8em; /* Adjust font size for mobile */
+    }
+
+    .section-content {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    .ascii-art {
+        font-size: 1em; /* Adjust size for mobile */
+    }
+
+    .terminal-text {
+        font-size: 1.5em; /* Adjust font size for mobile */
+    }
+
+    .personal-info h1 {
+        font-size: 1.5em; /* Adjust font size for mobile */
+    }
+
+    .personal-info p {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal {
+        font-size: 0.7em; /* Further adjust font size for smaller mobile screens */
+    }
+
+    .section-content {
+        font-size: 0.7em; /* Further adjust font size for smaller mobile screens */
+    }
+
+    .ascii-art {
+        font-size: 0.7em; /* Further adjust size for smaller mobile screens */
+    }
+
+    .terminal-text {
+        font-size: 1em; /* Further adjust font size for smaller mobile screens */
+    }
+
+    .personal-info h1 {
+        font-size: 1em; /* Further adjust font size for smaller mobile screens */
+    }
+
+    .personal-info p {
+        font-size: 0.7em; /* Further adjust font size for smaller mobile screens */
+    }
+}
+
+/* Icons */
+.skill-item i {
+    font-size: 1em; /* Adjust size as needed */
+    margin-right: 10px;
+    color: #49b516; /* Adjust color as needed */
+}
+
+/* Skill Section Layout */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust as needed */
+    box-sizing: border-box;
+}
+
+.skill-status {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    margin: 0;
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
+/* ASCII Art */
+.ascii-art {
+    font-family: monospace;
+    white-space: pre;
+    font-size: 1.2em; /* Adjust size as needed */
+    color: #49b516; /* Terminal green color */
+    margin-bottom: 20px;
+}
+
+/* Text Image */
+.text-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.terminal-text {
+    text-align: center;
+    font-size: 2em; /* Adjust size as needed */
+    color: #49b516; /* Terminal green color */
+    font-weight: bold;
+}
+
+/* Personal Info */
+.right {
+    flex: 1;
+    text-align: left;
     padding-left: 20px;
 }
 
-.opt{
-    height: 50px;
-    width: 12.5%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    /* border: 1px white solid; */
+.personal-info h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.personal-info p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.personal-info a {
+    color: #49b516;
+    text-decoration: none;
+}
+
+.personal-info a:hover {
+    text-decoration: underline;
 }
