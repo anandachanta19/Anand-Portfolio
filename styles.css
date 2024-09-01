@@ -227,7 +227,7 @@ footer {
 
 /* Icons */
 .skill-item i {
-    font-size: 1em; /* Adjust size as needed */
+    font-size: 1.4em; /* Adjust size as needed */
     margin-right: 10px;
     color: #49b516; /* Adjust color as needed */
 }
@@ -258,7 +258,7 @@ footer {
 
 .skill p {
     margin: 0;
-    font-size: 1.2em; /* Adjust size as needed */
+    font-size: 1.4em; /* Adjust size as needed */
 }
 
 /* ASCII Art */
